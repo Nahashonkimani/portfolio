@@ -1,0 +1,29 @@
+body{background-image: image("C:\Users\NAHASHON\Pictures\Camera\IMG_20200814_122142.jpg") ;
+background-color:rgb(58, 185, 58);}
+div{background-color:rgb(58, 214, 71);
+    text-shadow:5px;
+    text-decoration:wavy;
+font-style: oblique;}
+    p{
+        color: rgb(184, 96, 115);
+        text-shadow:10PX rgb(22, 19, 19);
+        border-start-end-radius: 10PX;
+    }
+    h2{
+        color:brown;
+        text-decoration-style:italic;
+    text-align:center;
+text-size-adjust: 10%;}
+h1{
+    color:rgb(236, 17, 17);
+    text-decoration-style:bold;
+text-align:100px;}
+    
+     .j{background-color: rgba(194, 252, 94, 0.021);
+        text-emphasis-color: rgb(228, 70, 70);
+        text-align:center;
+        width:250px;
+        height:150px;
+border-radius: 60px;
+        }
+        

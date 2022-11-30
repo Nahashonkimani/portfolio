@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100px, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index2.css">
+</head>
+<body>
+  <input type="text" placeholder="enter your year of birth" id="age">
+  <button onclick="find()">=</button>
+  <input type="text" placeholder="age" id="year">
+ 
+ 
+  <div class="container">
+    <div class="calculator">
+      <input type="text" placeholder="0" id="output">
+      <button onclick="clea()">clr</button>
+      <button onclick="del()">del</button>
+      <button onclick="display('%')">%</button>
+      <button onclick="display('+')">+</button>
+      <button onclick="display('1')">1</button>
+      <button onclick="display('2')">2</button>
+      <button onclick="display('3')">3</button>
+      <button onclick="display('-')">-</button>
+      <button onclick="display('3')">4</button>
+      <button onclick="display('5')">5</button>
+      <button onclick="display('6')">6</button>
+      <button onclick="display('*')">*</button>
+      <button onclick="display('7')">7</button>
+      <button onclick="display('8')">8</button>
+      <button onclick="display('9')">9</button>
+      <button onclick="display('/')">/</button>
+      <button onclick="display('.')">.</button>
+      <button onclick="display(0)">0</button>
+      <button onclick="calculate()" class="equal">=</button>
+     
+    </div>
+  </div>
+</body>
+<script>
+  let x=0;
+  let output=document.getElementById("output");
+  let age=document.getElementById("age");
+  let year=document.getElementById("year");
+  function display(num){
+    output.value+=num
+    age.value+=num
+  }
+  function calculate(){
+try{
+  output.value=eval(output.value);
+}
+catch(err){
+output.value="syntax error"
+}
+  }
+  function del(){
+    output.value= output.value.slice(0,-1);
+    age.value= age.value.slice(0,-1);
+  }
+  function clea(){
+    output.value= "";
+    age.value= "";
+  }
+function find(){
+  x=(2022-age.value);
+
+ if (x<0){
+    year.value="you are not born";
+  }
+  else if(x>130){
+    year.value="oops!! you died";
+  }
+  else{
+  year.value="your age is:"+x;
+}}
+</script>
+</html>

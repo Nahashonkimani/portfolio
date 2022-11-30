@@ -1,0 +1,58 @@
+:root{
+    --cell-size:100px;
+    --color:#81c3fd;
+    --color-set:#0275d8;
+    --l:10px;
+
+}
+body{
+    background: linear-gradient(70deg,blue,white,red);
+    margin: 0;
+   
+
+}
+.board{
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+}
+.cell{
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border: 1px solid black ;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.cell.x, .cell.circle{
+    cursor: not-allowed;
+}
+.winning-message{
+    /*display: none;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.winning-message button{
+    border-radius: 10px;
+    font-size: 3rem;
+    background-color: blanchedalmond;
+    border: 1px solid var(--color-set);
+    padding: .25em .5em;
+    cursor: pointer;
+}
+.winning-message button:hover{
+    background-color: var(--color-set);
+    color: white;
+    border-color: white;
+}
+.winning-message.show{
+    display: flex;
+}
